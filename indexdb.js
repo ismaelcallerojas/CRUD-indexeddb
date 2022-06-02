@@ -16,3 +16,12 @@ dbConnection.onupgradeneeded = (e) => {
         keyPath: 'clave'
     });
 }
+// El errorevento se activa IDBTransactioncuando una solicitud devuelve un error 
+// y el evento aparece en el objeto de la transacción.
+dbConnection.onerror = (error) =>{
+    console.log(error);
+}
+// https://developer.mozilla.org/es/docs/Web/API/IDBObjectStore/add
+// https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get
+// https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/delete
+// https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put
